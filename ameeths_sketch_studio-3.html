@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#34251e">
+<title>Ameeth's Sketch Studio | Drawings Made Personal</title>
+<style>
+:root{--brown:#4a3025;--brown2:#6f4b38;--cream:#f6efe5;--paper:#fffaf4;--tan:#d9c2a7;--muted:#786b61;--line:#e7d9c9}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--brown);background:var(--paper);font-family:Arial,Helvetica,sans-serif}
+header{background:var(--brown);color:#fffaf4;position:sticky;top:0;z-index:9;box-shadow:0 2px 12px #24140f20}.nav{max-width:1160px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{color:inherit;text-decoration:none}.logo{font-family:"Brush Script MT","Segoe Script",cursive;font-size:29px;line-height:1.1}.logo small{display:block;font:9px Arial,sans-serif;letter-spacing:2px;margin-top:4px}
+nav{display:flex;gap:17px;align-items:center}nav a,footer a{color:inherit;text-decoration:none;font-size:13px;white-space:nowrap}nav a:hover,footer a:hover{color:var(--tan)}.menu{display:none;background:transparent;color:white;border:1px solid #a78c79;border-radius:5px;padding:8px}
+.cart{font-size:13px;border:1px solid #a78c79;border-radius:20px;padding:8px 12px;white-space:nowrap}
+.hero{min-height:430px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(246,239,229,.98) 0%,rgba(246,239,229,.92) 38%,rgba(246,239,229,.18) 100%),url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1800&q=85') center/cover}
+.hero-inner{width:100%;max-width:1160px;margin:auto;padding:62px 22px}.eyebrow{text-transform:uppercase;font-size:12px;letter-spacing:2px;font-weight:bold;color:var(--brown2)}h1,h2{font-family:Georgia,"Times New Roman",serif}h1{font-size:clamp(40px,5.3vw,64px);line-height:1.03;max-width:500px;margin:16px 0} .hero p{max-width:420px;line-height:1.75;color:#594b42}
+.btn{display:inline-block;background:var(--brown);color:white;text-decoration:none;border:0;border-radius:5px;padding:13px 20px;margin-top:10px;font-weight:bold;cursor:pointer}.btn:hover{background:var(--brown2)}
+.benefits{max-width:1160px;margin:auto;padding:24px 22px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;border-bottom:1px solid var(--line)}.benefit{display:flex;align-items:center;gap:12px;border-right:1px solid var(--line);padding:0 10px}.benefit:last-child{border:0}.ico{font-size:26px}.benefit strong{display:block;font-size:13px}.benefit small{display:block;color:var(--muted);margin-top:5px;font-size:12px}
+section.content{max-width:1160px;margin:auto;padding:40px 22px}.section-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:22px}.section-head h2{font-size:30px;margin:0}.section-head a{font-size:13px;color:var(--brown)}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}.card{padding:10px;border:1px solid var(--line);background:white;border-radius:4px;transition:.2s}.card:hover{transform:translateY(-3px);box-shadow:0 10px 25px #4a30251a}.art{height:225px;background:var(--cream);overflow:hidden}.art img{width:100%;height:100%;object-fit:cover;display:block}.card h3{font-size:15px;margin:12px 0 6px}.price{font-weight:bold;font-size:14px}.card .btn{width:100%;font-size:12px;padding:11px 5px;margin-top:12px}
+.custom{display:grid;grid-template-columns:1fr 1.25fr;background:#eee5d8;margin-top:26px}.custom img{width:100%;height:100%;min-height:230px;object-fit:cover}.custom-copy{padding:30px}.custom-copy h2{margin:0 0 10px}.custom-copy p{line-height:1.7;color:#625349}
+.contact{background:var(--cream);padding:38px 20px;text-align:center}.contact h2{margin-top:0}.contact p{color:var(--muted);line-height:1.6}.contact .btn{margin:6px}
+footer{background:var(--brown);color:#fffaf4;padding:27px 22px}.footer-inner{max-width:1160px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.footer-links{display:flex;gap:20px}.copyright{text-align:center;font-size:12px;color:#d8c6b7;padding-top:18px}
+#toast{display:none;position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--brown);color:white;padding:12px 18px;border-radius:8px;z-index:20;box-shadow:0 5px 25px #0003;max-width:90%;text-align:center}
+@media(max-width:950px){nav{gap:11px}nav a{font-size:12px}.logo{font-size:24px}}
+@media(max-width:780px){.products{grid-template-columns:repeat(2,1fr)}.art{height:205px}.benefits{grid-template-columns:repeat(2,1fr)}.benefit:nth-child(2){border-right:0}.custom{grid-template-columns:1fr}.custom img{height:230px}}
+@media(max-width:540px){.nav{flex-wrap:wrap}.menu{display:block}nav{display:none;width:100%;flex-direction:column;gap:0;order:5}nav.open{display:flex}nav a{padding:11px 0;border-top:1px solid #6f584b}.logo{font-size:25px}.hero{min-height:390px;background-position:58% center}.hero-inner{padding:45px 20px}.hero p{max-width:310px}.benefits{padding:20px 12px;gap:12px}.benefit{padding:0 4px;border:0}.ico{font-size:22px}.benefit strong{font-size:12px}.benefit small{font-size:11px}.content{padding:30px 14px!important}.section-head h2{font-size:25px}.products{gap:10px}.card{padding:7px}.art{height:160px}.card h3{font-size:13px}.card .btn{font-size:11px}.custom-copy{padding:24px}.footer-inner{justify-content:center;text-align:center}.footer-links{width:100%;justify-content:center}}
+</style>
+</head>
+<body>
+<header><div class="nav">
+<a class="brand" href="#home"><div class="logo">Ameeth's Sketch Studio<small>HANDMADE ART • MADE WITH HEART</small></div></a>
+<button class="menu" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="Toggle navigation">☰ Menu</button>
+<nav aria-label="Main menu">
+<a href="#home">Home</a>
+<a href="#shop">All Drawings</a>
+<a href="#shop">Single Portrait Sketch</a>
+<a href="#shop">Double Portrait Sketch</a>
+<a href="#shop">Pet Portrait Sketch</a>
+<a href="#shop">Single Colour portrait Sketch</a>
+<a href="#about">About Studio</a>
+<a href="#contact">Contact / Custom Order</a>
+</nav>
+<div class="Wishlist">🛒 Wishlist: <b id="WishlistCount">0</b></div>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="hero-inner">
+<div class="eyebrow">Handmade drawings • Custom orders welcome</div>
+<h1>Your Memories,<br>Drawn by Hand.</h1>
+<p>Turn your favourite moments into beautiful artwork. Discover Single Portrait Sketch,Double Portrait Sketch , pet portrait Sketch and Single Colour portrait Sketch—each made with care.</p>
+<a class="btn" href="#shop">Explore the Gallery&nbsp; →</a>
+</div></section>
+<div class="benefits">
+<div class="benefit"><span class="ico">✎</span><div><strong>Made to Order</strong><small>Your idea, your artwork</small></div></div>
+<div class="benefit"><span class="ico">♡</span><div><strong>Made with Care</strong><small>Every detail matters</small></div></div>
+<div class="benefit"><span class="ico">♧</span><div><strong>Careful Packaging</strong><small>Art packed with care</small></div></div>
+<div class="benefit"><span class="ico">✉</span><div><strong>Personal Support</strong><small>Here to help you</small></div></div>
+</div>
+<section class="content" id="shop">
+<div class="section-head"><h2>Featured Artwork</h2><a href="#contact">Need a custom drawing? →</a></div>
+<div class="products">
+<article class="card"><div class="art"><img src="C:/Users/Test/Desktop/project folder/images/pencil portrait.jpeg"/img></div><h3>Single Portrait Sketch</h3><div class="price">A4-₹549  A3-₹999</div><button class="btn" onclick="addToWishlist('Single Portrait Sketch',A4-549  A3-999)">🛒 Add to Wishlist</button></article>
+<article class="card"><div class="art"><img src="C:/Users/Test/Desktop/project folder/images/couple image.jpeg"/img></div><h3>Double Portrait Sketch</h3><div class="price">A4-₹1099  A3-₹2099</div><button class="btn" onclick="addToWishlist('Double Portrait Sketch',A4-1099  A3-2099)">🛒 Add to Wishlist</button></article>
+<article class="card"><div class="art"><img src="C:/Users/Test/Desktop/project folder/images/pet drawing.jpeg"/img></div><h3>Pet Portrait Sketch</h3><div class="price">₹449</div><button class="btn" onclick="addToWishlist('Pet Portrait Sketch',449)">🛒 Add to Wishlist</button></article>
+<article class="card"><div class="art"><img src="C:/Users/Test/Desktop/project folder/images/colour sketch.jpeg"/img></div><h3>Single  Colour Portrait Sketch</h3><div class="price">A4-₹849  A3-₹1449</div><button class="btn" onclick="addToWishlist('Single Colour Portrait Sketch',A4-849  A3-1449)">🛒 Add to Wishlist</button></article>
+</div>
+<div class="custom" id="about"><img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=900&q=85" alt="Art workspace"><div class="custom-copy"><h2>Welcome to My Studio</h2><p>At Ameeth's Sketch Studio, I believe a drawing can hold a memory, a feeling, or a story. From individual portraits and couple sketches to pet art and landscapes, every piece is created with patience and attention to detail.</p><p>Have a photo you'd love to turn into art? Send me a message to discuss your idea and custom order.</p><a class="btn" href="#contact">Order a Custom Drawing →</a></div></div>
+</section>
+<section class="contact" id="contact"><h2>Let's Create Your Artwork</h2><p>Choose a design, ask about a custom portrait, or discuss an order directly.</p>
+<a class="btn" id="whatsappLink" href="#" onclick="return orderWhatsApp()">Order on WhatsApp</a>
+<a class="btn" href="mailto:your-ameethkumar8098@gmail.com?subject=Drawing%20Order%20Enquiry">Email Enquiry</a>
+<p style="font-size:12px">Before publishing, replace the sample WhatsApp number and email address in the website code with your own.</p></section>
+</main>
+<footer><div class="footer-inner"><div class="logo">Ameeth's Sketch Studio<small>HANDMADE ART • MADE WITH HEART</small></div><div class="footer-links"><a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">About</a><a href="#contact">Contact</a></div><div>✎ &nbsp; ♡ &nbsp; ✉</div></div><div class="copyright">© <span id="2k26"></span> Ameeth's Sketch Studio. All rights reserved.</div></footer>
+<div id="toast" role="status"></div>
+<script>
+const Wishlist=[];
+function addToWishlist(name,price){Wishlist.push({name,price});document.getElementById('WishlistCount').textContent=Wishlist.length;const t=document.getElementById('toast');t.textContent=name+' added to your Wishlist. WhatsApp checkout can be connected with your number.';t.style.display='block';setTimeout(()=>t.style.display='none',2600);}
+function orderWhatsApp() {
+    const phone = "916383617857";
+
+    const message =
+        "Hello Ameeth's Sketch Studio! 👋\n\n" +
+        "I would like to order a drawing.\n\n" +
+        "Please share the details. Thank you!";
+
+    const url =
+        "https://wa.me/" + phone +
+        "?text=" + encodeURIComponent(message);
+
+    window.open(url, "_blank");
+
+    return false;}
+</script>
+</body></html>
